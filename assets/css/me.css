@@ -122,16 +122,17 @@ body.page-template-page-fullsingle-me {
         line-height: 40px; } }
 
 .fs-me {
-  padding: 10vh 10vw;
+  padding: 3vh 3vw;
   overflow: hidden;
   position: absolute;
   z-index: 1000; }
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     .fs-me {
-      padding: 5vh 5vw;
+      padding: 1vh 5vw;
       text-align: center; } }
   .fs-me .me-content {
-    height: 80vh;
+    height: 100vh;
+    width: 95vw;
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
@@ -164,7 +165,9 @@ body.page-template-page-fullsingle-me {
               align-self: center; } }
   .logo img {
     max-width: 165px;
-    height: auto; }
+    height: auto;
+    padding-bottom: 0px;
+    }
 
 .bio {
   -webkit-box-flex: 1;
