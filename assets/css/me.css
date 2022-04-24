@@ -122,11 +122,11 @@ body.page-template-page-fullsingle-me {
         line-height: 40px; } }
 
 .fs-me {
-  padding: 1vh 1vw;
+  padding: 0vh 2vw;
   overflow: hidden;
   position: absolute;
   z-index: 1000; }
-  @media (max-width: 800px) {
+  @media (max-width: 100%) {
     .fs-me {
       padding: 1vh 5vw;
       text-align: center; } }
