@@ -12,7 +12,7 @@
 	<meta name="referrer" content="always" />
 
 	<!-- Social & Open Graph -->
-	<meta property="og:title" content="Cholas Timeline" />
+	<meta property="og:title" content="muthu.pro" />
 	<meta property="og:description" content="muthu.pro" />
 	<meta property="og:url" content="https://muthu.pro" />
 	<meta name="twitter:title" content="@ntypeq" >
@@ -25,43 +25,134 @@
 
 <!-- CSS Reset -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+<style>
+  html {
+  height:100%;
+}
 
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 10s ease-in-out infinite alternate;
+  background-image: linear-gradient(-20deg, white 50%, #e4dcdc 50%);
+  bottom:0;
+  left:-100%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:25s;
+}
+
+.bg3 {
+  animation-duration:25s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+.animate-charcter
+{
+ 
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #d13367 67%,
+    #0051ff 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 30px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+</style>
 
 
 <!-- Milligram CSS -->
 <link rel="stylesheet" href="../assets/css/milligram.css">
 </head>
 <body>
+  <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-right">
+      <a href="../index.html"><p class="animate-charcter" style="font-size: 12px; text-align: right;">{muthu.pro}</p></a><br>
+      <a href="../index.html"><h5 class="animate-charcter">முத்துகுமார் தமிழ்மனி</h5></a>
+    </div>
+  </div>
+</div>
   <div class="container">
-	<h7><a href="../index.html"><b>{muthu.pro} / முத்துகுமார் தமிழ்மனி</b></a></h7><hr>
    <table>
     <thead>
       <tr>
         <th><span style="color: blueviolet;">▼</span> TIMELINE / காலவரிசை</th>
-        <th>Langauge</th>
-        <th>Download</th>
+        <th>💬</th>
+        
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a href="/cholas-timeline/cholas-timeline.html"><button class="button button-clear">Cholas Timeline {eng}</button></a></td>
-        <td>ENG</td>
-        <td>1,91</td>
+        <td>a</td>
       </tr>
       <tr>
         <td><a href="/dmk-timline/dmk-timeline.html"><button class="button button-clear">திமுக காலவரிசை {Draft}</button></a></td>
-        <td>தமிழ்</td>
-        <td>2,01</td>
+        <td>அ</td>
       </tr>
       <tr>
         <td><a href="/cholas-timeline/cholas-timeline-tamil.html"><button class="button button-clear">சோழ ராஜ்ய காலவரிசை</button></a></td>
-        <td>தமிழ்</td>
-        <td>2,01</td>
+        <td>அ</td>
+      </tr>
+      <tr>
+        <td><a href="/sangam-books/sangam.html"><button class="button button-clear">சங்ககால படைப்புகளின் காலவரிசை</button></a></td>
+        <td>அ</td>
       </tr>
       <tr>
         <td><a href="/anna-milestone/anna.html"><button class="button button-clear">Aringar Anna Milestone {eng}</button></a></td>
-        <td>ENG</td>
-        <td>2,01</td>
+        <td>a</td>
       </tr>
     </tbody>
   </table>
@@ -69,17 +160,19 @@
     <thead>
       <tr>
         <th><span style="color: blueviolet;">▼ </span>BOOKS / புத்தகம்</th>
-        <th>Language</th>
-        <th>Download</th>
+        <th>💬</th>
+
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a href="/reference-books/tamil studies.pdf"><button class="button button-clear">Tamil Studies {book}</button></a></td>
-        <td>ENG</td>
-        <td>1,91</td>
+        <td>a</td>
       </tr>
-  
+      <tr>
+        <td><a href="/reference-books/tamil studies.pdf"><button class="button button-clear">Tamil Studies {book}</button></a></td>
+        <td>a</td>
+      </tr>
     </tbody>
   </table>
   <br>
