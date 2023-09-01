@@ -30,7 +30,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         content: {
             /* Location of file where it is hosted */
             location: {
-                url: "sangakaala_rulers_tamil.pdf",
+                url: "https://muthu.pro/sangakala-ruler-timeline/sangakaala_rulers_tamil.pdf",
                 /*
                 If the file URL requires some additional headers, then it can be passed as follows:-
                 header: [
