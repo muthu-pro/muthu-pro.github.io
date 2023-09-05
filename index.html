@@ -25,6 +25,7 @@
 
 <!-- CSS Reset -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.css">
 <style>
   html {
   height:100%;
@@ -144,42 +145,10 @@ body {
       </div>
     </div>
     <div class="column column-75">
-   <table>
-    <thead>
-      <tr>
-        <th><span style="color: blueviolet;">▼</span> TIMELINE / காலவரிசை</th>
-        <th>✎</th>
-        
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a href="/cholas-timeline/cholas-timeline.html"><button class="button button-clear">Cholas Timeline</button></a></td>
-        <td style="font-size: small;">முத்துகுமார் தமிழ்மணி</td>
-      </tr>
-      <tr>
-        <td><a href="/dmk-timline/dmk-timeline.html"><button class="button button-clear">திமுக காலவரிசை</button></a></td>
-        <td style="font-size: small;">முத்துகுமார் தமிழ்மணி</td>
-      </tr>
-      <tr>
-        <td><a href="/cholas-timeline/cholas-timeline-tamil.html"><button class="button button-clear">சோழ ராஜ்ய காலவரிசை</button></a></td>
-        <td style="font-size: small;">முத்துகுமார் தமிழ்மணி</td>
-      </tr>
-      <tr>
-        <td><a href="/sangam-books/sangam.html"><button class="button button-clear">சங்க கால நூல்கள்‌ (1000 BCE - 300 CE)</button></a></td>
-        <td style="font-size: small;">முத்துகுமார் தமிழ்மணி</td>
-      </tr>
-      <tr>
-        <td><a href="/anna-milestone/anna.html"><button class="button button-clear">Aringar Anna Milestone</button></a></td>
-        <td style="font-size: small;">முத்துகுமார் தமிழ்மணி</td>
-      </tr>
-      <tr>
-        <td><a href="/sangakala-ruler-timeline/sangakaala_rulers_tamil.html"><button class="button button-clear">சங்ககால மூவேந்தர் அட்டவணை
-(350 BCE - 25 CE வரை)</button></a></td>
-        <td style="font-size: small;">முத்துகுமார் தமிழ்மணி</td>
-      </tr>
-    </tbody>
-  </table>
+      <br/>
+      <span style="color: blueviolet;"><h4>▼ காலவரிசை </h4></span>
+      <div id="grid" style="width: 100%; height: 400px;opacity: 0.7;"></div>
+  <br/>
    <table>
     <thead>
       <tr>
@@ -202,11 +171,131 @@ body {
       </tr>
     </tbody>
   </table>
-</div>
-
 
 </div>
 
-  
+
+</div>
+
+
+
+
+  <script  type="module">
+    import {
+  w2grid,
+  w2utils
+} from 'https://rawgit.com/vitmalina/w2ui/master/dist/w2ui.es6.min.js'
+
+let grid = new w2grid({
+  name: 'grid',
+  box: '#grid',
+  show: {
+    toolbar: true,
+    footer: true
+  },
+  multiSearch: true,
+  searches: [{
+      field: 'recid',
+      label: 'ID ',
+      type: 'int'
+    },
+    {
+      field: 'lname',
+      label: 'காலவரிசை',
+      type: 'text'
+    },
+    {
+      field: 'fname',
+      label: 'ஆசிரியர்',
+      type: 'text'
+    },
+    { field: 'status', label: ' நிலை', type: 'enum', style: 'width1: 350px',
+            options: { items: ['live', 'draft', 'deleted'] }
+        },
+        {
+      field: 'sname',
+      label: 'TAG',
+      type: 'text'
+    },
+    
+  ],
+  columns: [{
+      field: 'recid',
+      text: '<b>என்</b>',
+      size: '50px',
+      sortable: true,
+      attr: 'align=center'
+    },
+    {
+      field: 'lname',
+      text: '<b>காலவரிசை</b>',
+      size: '65%',
+      sortable: true
+    },
+    {
+      field: 'fname',
+      text: '<b>ஆசிரியர்</b>',
+      size: '35%',
+      sortable: true
+    },
+
+    {
+      field: 'status',
+      text: '<b>நிலை</b>',
+      size: '100px'
+    }
+  ],
+  records: [{
+      recid: 1,
+      fname: 'முத்துகுமார் தமிழ்மணி',
+      lname: '<a href="/cholas-timeline/cholas-timeline.html">Cholas Timeline</a>',
+      status: ['active'],
+      sname: 'Cholas Timeline'
+    },
+    {
+      recid: 2,
+      fname: 'முத்துகுமார் தமிழ்மணி',
+      lname: '<a href="/dmk-timline/dmk-timeline.html">திமுக காலவரிசை</a>',
+      status: ['active'],
+      sname: 'திமுக காலவரிசை'
+    },
+    {
+      recid: 3,
+      fname: 'முத்துகுமார் தமிழ்மணி',
+      lname: '<a href="/cholas-timeline/cholas-timeline-tamil.html">சோழ ராஜ்ய காலவரிசை</a>',
+      status: ['active'],
+      sname: 'சோழ ராஜ்ய காலவரிசை'
+    },
+    {
+      recid: 4,
+      fname: 'முத்துகுமார் தமிழ்மணி',
+      lname: '<a href="/sangam-books/sangam.html">சங்க கால நூல்கள்‌ (1000 BCE - 300 CE)</a>',
+      status: ['active'],
+      sname: 'சங்க கால நூல்கள்‌ (1000 BCE - 300 CE)'
+    },
+    {
+      recid: 5,
+      fname: 'முத்துகுமார் தமிழ்மணி',
+      lname: '<a href="/anna-milestone/anna.html">Aringar Anna Milestone</a>',
+      status: ['draft'],
+      sname: 'Aringar Anna Milestone'
+    },
+    {
+      recid: 6,
+      fname: 'முத்துகுமார் தமிழ்மணி',
+      lname: '<a href="/sangakala-ruler-timeline/sangakaala_rulers_tamil.html">சங்ககால மூவேந்தர் அட்டவணை (350 BCE - 25 CE வரை)</a>',
+      status: ['active'],
+      sname: 'சங்ககால மூவேந்தர் அட்டவணை (350 BCE - 25 CE வரை)'
+    }
+  ]
+})
+
+window.multi = function(el) {
+  grid.multiSearch = el.checked
+  grid.searchReset()
+  grid.refresh()
+}
+
+    </script>
 </body>
 </html>
