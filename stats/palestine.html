@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	
+	<!-- SEO -->
+	<title>Aringar Anna  Milestone </title>
+	<meta name="robots" content="index, follow" />
+	<meta name="referrer" content="always" />
+
+	<!-- Social & Open Graph -->
+	<meta property="og:title" content="திமுக காலவரிசை" />
+	<meta property="og:description" content="muthu.pro" />
+	<meta property="og:url" content="https://muthu.pro" />
+	<meta name="twitter:title" content="@ntypeq" >
+	<meta name="twitter:description" content="NQ - @ntypeq" />
+	
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+
+	<!-- Styles -->
+    <style>
+      #btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  border: none;
+}
+    body {	
+  margin: 0;
+  padding: 0;
+  background: rgb(255, 255, 255);
+  
+  color: rgb(50,50,50);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100.5%;
+  line-height: 1.6em;
+}
+</style>
+
+    <link rel="stylesheet" href="../assets/css/milligram.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript">
+      window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
+      heap.load("2714317748");
+    </script>
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    </head>
+<body>
+  <h4>&nbsp;<a class="button button-clear dowload"  href="../index.html">{muthu.pro}</a> <a class="button button-clear dowload"  href="/periyaar-milestone/periyaar.html">❯ Periyar - Milestone</a><a class="button button-clear dowload" href="/periyaar-milestone/periyaar-milestone.pdf">❯ Download {PDF format}</a>  <a class="button button-clear dowload" href="https://pmu.edu/centres/pdf/Biographical_Sketch.pdf"> ❯ Source Lookup</a> </h4>
+
+  <div class="container">   
+    <div id="chart_div"></div>
+
+  </div>  
+  <script>
+    google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawBasic);
+
+function drawBasic() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'X');
+      data.addColumn('number', 'Jews Settlement');
+
+      data.addRows([
+        [1920, 5514],   [1921, 9149],  [1922, 7844],  [1923, 7412],  [1924, 12856],  [1925, 33801],
+        [1926, 13081],  [1927, 2713],  [1928, 2178],  [1929, 5249],  [1930, 4944], [1931, 4075],
+        [1932, 9553], [1933, 30327], [1934, 42359], [1935, 61854], [1936, 29727], [1937, 10536],
+        [1938, 12868], [1939, 16405], [1940, 4547], [1941, 3647], [1942, 2194], [1943, 8507],
+        [1944, 14464], [1945, 12751], [1946, 7851]
+      ]);
+
+      var options = {
+        hAxis: {
+          title: 'year'
+        },
+        vAxis: {
+          title: 'settlers'
+        }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+  </script>
+  <p>
+
+    <a class="button button-small button-clear">  &nbsp; &copy;2023 muthu.pro &nbsp;/&nbsp; தமிழ் நாடு <a class="button button-small button-clear" href="mailto:dontspam@muthu.pro" target="_blank">@mail</a>
+        </a>
+    </p>
+</body>
+</html>
