@@ -7,12 +7,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	
 	<!-- SEO -->
-	<title>Aringar Anna  Milestone </title>
+	<title>Jewish Immigration to Palastines</title>
 	<meta name="robots" content="index, follow" />
 	<meta name="referrer" content="always" />
 
 	<!-- Social & Open Graph -->
-	<meta property="og:title" content="திமுக காலவரிசை" />
+	<meta property="og:title" content="Jewish Immigration to Palastines" />
 	<meta property="og:description" content="muthu.pro" />
 	<meta property="og:url" content="https://muthu.pro" />
 	<meta name="twitter:title" content="@ntypeq" >
@@ -48,47 +48,37 @@
       window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
       heap.load("2714317748");
     </script>
-     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    </head>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
 <body>
-  <h4>&nbsp;<a class="button button-clear dowload"  href="../index.html">{muthu.pro}</a> <a class="button button-clear dowload"  href="/periyaar-milestone/periyaar.html">❯ Periyar - Milestone</a><a class="button button-clear dowload" href="/periyaar-milestone/periyaar-milestone.pdf">❯ Download {PDF format}</a>  <a class="button button-clear dowload" href="https://pmu.edu/centres/pdf/Biographical_Sketch.pdf"> ❯ Source Lookup</a> </h4>
+  <h4>&nbsp;<a class="button button-clear dowload"  href="../index.html">{muthu.pro}</a> <a class="button button-clear dowload"  href="/stats/palestine.html">❯ Jewish Immigration to Palastines</a>  <a class="button button-clear dowload" href="https://www.aljazeera.com/news/2023/10/9/whats-the-israel-palestine-conflict-about-a-simple-guide"> ❯ Source Lookup</a> </h4>
 
   <div class="container">   
-    <div id="chart_div"></div>
+    <div id="myPlot" style="width:100%"></div>
 
   </div>  
   <script>
-    google.charts.load('current', {packages: ['corechart', 'line']});
-google.charts.setOnLoadCallback(drawBasic);
-
-function drawBasic() {
-
-      var data = new google.visualization.DataTable();
-      data.addColumn('number', 'X');
-      data.addColumn('number', 'Jews Settlement');
-
-      data.addRows([
-        [1920, 5514],   [1921, 9149],  [1922, 7844],  [1923, 7412],  [1924, 12856],  [1925, 33801],
-        [1926, 13081],  [1927, 2713],  [1928, 2178],  [1929, 5249],  [1930, 4944], [1931, 4075],
-        [1932, 9553], [1933, 30327], [1934, 42359], [1935, 61854], [1936, 29727], [1937, 10536],
-        [1938, 12868], [1939, 16405], [1940, 4547], [1941, 3647], [1942, 2194], [1943, 8507],
-        [1944, 14464], [1945, 12751], [1946, 7851]
-      ]);
-
-      var options = {
-        hAxis: {
-          title: 'year'
-        },
-        vAxis: {
-          title: 'settlers'
-        }
-      };
-
-      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-
-      chart.draw(data, options);
-    }
-  </script>
+    const yArray = [5514,9149,7844,7412,12856,33801,13081,2713,2178,5249,4944,9553,30327,42359,61854,29727,10536,12868,16405,4547,3647,2194,8507,14464,12751,7851];
+    const xArray = [1920,1921,1922,1923,1924,1925,1926,1927,1928,1929,1930,1931,1932,1933,1934,1935,1936,1937,1938,1939,1940,1941,1942,1943,1944,1945,1946];
+    
+    // Define Data
+    const data = [{
+      x:xArray,
+      y:yArray,
+      mode:"lines+markers"
+    }];
+    
+    // Define Layout
+    const layout = {
+      xaxis: {range: [1920, 1946], title: "Years"},
+      yaxis: {range: [0, 80000], title: "Immigration"},  
+      title: "Jewish Immigration to Palastines (1920-1946)"
+    };
+    
+    // Display using Plotly
+    Plotly.newPlot("myPlot", data, layout);
+    </script>
+    
   <p>
 
     <a class="button button-small button-clear">  &nbsp; &copy;2023 muthu.pro &nbsp;/&nbsp; தமிழ் நாடு <a class="button button-small button-clear" href="mailto:dontspam@muthu.pro" target="_blank">@mail</a>
