@@ -28,22 +28,52 @@
 
 <!-- Milligram CSS -->
 <link rel="stylesheet" href="../assets/css/milligram.css">
+<script src="../build/svg-pan-zoom.min.js"></script>
+
 </head>
 <body>
 
 		&nbsp;&nbsp;&nbsp;&nbsp;<small><b><a href="../index.html">{MUTHU.PRO}</a></b></small><a class="button button-clear dowload"  href="/cholas-timeline/cholas-timeline.html"> ❯ Chola Kingdom Timeline </a> <a class="button button-clear dowload"  href="cholar_muzhu_varalaru.pdf"> ❯ SOURCE LOOKUP</a><a class="button button-clear dowload"  href="cholas-timeline.pdf"> ❯ Download PDF</a>
 
-<br/>
-<object
-    data="cholas-timeline.pdf#zoom=80%#FitH"
-    type="application/pdf"
-    title="Chola Kingdom Timeline"
-    width="100%" 
-    height="680px">
-    <p>
-        <img src="cholas.png" height="680px">
-    </p>
-</object>
+<<div>
+	<div class="controls" style="cursor:grabbing;">
+		<br>
+		<button id="zoom-in" class="button button-clear">+ zoom In</button>
+		<button id="reset" class="button button-clear">[Reset]</button>
+		<button id="zoom-out" class="button button-clear">- Zoom Out</button>
+	  </div>
+
+	<object id="demo-tiger" type="image/svg+xml" data="cholas-timeline.svg" style="width: 100%; height: 700px; border:1px dashed black;">Your browser does not support SVG</object>
+	<script>
+		// Don't use window.onLoad like this in production, because it can only listen to one function.
+		window.onload = function() {
+		  var panZoom = svgPanZoom('#demo-tiger', {
+			zoomEnabled: true,
+			controlIconsEnabled: false
+		  });
+  
+		  document.getElementById('zoom-in').addEventListener('click', function(ev){
+			ev.preventDefault()
+  
+			panZoom.zoomIn()
+		  });
+  
+		  document.getElementById('zoom-out').addEventListener('click', function(ev){
+			ev.preventDefault()
+  
+			panZoom.zoomOut()
+		  });
+  
+		  document.getElementById('reset').addEventListener('click', function(ev){
+			ev.preventDefault()
+  
+			panZoom.resetZoom()
+		  });
+		};
+	  </script>
+	
+<br>
+</div>
 
  
 <br>

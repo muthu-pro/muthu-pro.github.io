@@ -28,6 +28,8 @@
 
 <!-- Milligram CSS -->
 <link rel="stylesheet" href="../assets/css/milligram.css">
+<script src="../build/svg-pan-zoom.min.js"></script>
+
 
 </head>
 <body>
@@ -35,18 +37,46 @@
 <a class="button button-clear dowload"  href="../index.html">{muthu.pro}</a><a class="button button-clear dowload"  href="/sangakala-ruler-timeline/sangakaala_rulers_tamil.html"> ❯ சங்ககால மூவேந்தர் அட்டவணை
 		(350 BCE - 25 CE வரை)</a> <a class="button button-clear dowload"  href="https://drive.google.com/file/d/1n_ezJ7_V-I3OBPXHbe0qjCZvWFGZFwyz/view?usp=sharing"> ❯ SOURCE LOOKUP</a>
 
-		<object
-		data="sangakaala_rulers_tamil.pdf#view=FitV"
-		type="application/pdf"
-		width="100%"
-		height="850px"
-		title="Chola Kingdom Timeline">
+		<div>
+			<div class="controls" style="cursor:grabbing;">
+				<br>
+				<button id="zoom-in" class="button button-clear">+ zoom In</button>
+				<button id="reset" class="button button-clear">[Reset]</button>
+				<button id="zoom-out" class="button button-clear">- Zoom Out</button>
+			  </div>
+		
+			<object id="demo-tiger" type="image/svg+xml" data="sangakaala_rulers_tamil.svg" style="width: 100%; height: 700px; border:1px dashed black;">Your browser does not support SVG</object>
+			<script>
+				// Don't use window.onLoad like this in production, because it can only listen to one function.
+				window.onload = function() {
+				  var panZoom = svgPanZoom('#demo-tiger', {
+					zoomEnabled: true,
+					controlIconsEnabled: false
+				  });
+		  
+				  document.getElementById('zoom-in').addEventListener('click', function(ev){
+					ev.preventDefault()
+		  
+					panZoom.zoomIn()
+				  });
+		  
+				  document.getElementById('zoom-out').addEventListener('click', function(ev){
+					ev.preventDefault()
+		  
+					panZoom.zoomOut()
+				  });
+		  
+				  document.getElementById('reset').addEventListener('click', function(ev){
+					ev.preventDefault()
+		  
+					panZoom.resetZoom()
+				  });
+				};
+			  </script>
+			
+		<br>
+		</div>
 		<p>
-			<img src="sangakaala_rulers_tamil.png" height="100%">
-		</p>
-	</object>
-
-<p>
     <a class="button button-small button-clear">  &nbsp; &copy;2023 muthu.pro &nbsp;/&nbsp; தமிழ் நாடு <a class="button button-small button-clear" href="mailto:dontspam@muthu.pro" target="_blank">@mail</a>
         </a>
     </p>
