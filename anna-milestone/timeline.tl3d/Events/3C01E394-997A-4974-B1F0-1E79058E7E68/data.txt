@@ -1,0 +1,1 @@
+{"format":"D:1 0 0","range":"1933","start":-1167629400,"notes":"Chairman of the College Economics Association.","v":"1.1","color":0}
